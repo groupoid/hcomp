@@ -1,10 +1,9 @@
 [![Build Status](https://travis-ci.org/groupoid/hcomp.svg?branch=master)](https://travis-ci.org/groupoid/hcomp)
 
-Groupoid Infinity Cubical Base Library
-======================================
+Groupoid Infinity
+=================
 
-This Library is compatible with `hcomptrans` branch of `cubicaltt` that fully supports recursive HITs.
-As example Hopf fibration is given formally due to Guillaume Brunerie:
+The Groupoid Infinity Cubical Base Library is compatible with `hcomptrans` branch of `cubicaltt` that fully supports recursive HITs. As example Hopf fibration is given formally due to Guillaume Brunerie:
 
 ```
 rot: (x : S1) -> Path S1 x x = split
