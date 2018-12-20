@@ -15,7 +15,6 @@ cache:
 addons:
   apt:
     packages:
-      - bnfc
       - libgmp-dev
 
 before_install:
@@ -24,14 +23,11 @@ before_install:
   - travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
 
 install:
-  - git clone git://github.com/mortberg/cubicaltt
+  - git clone --single-branch --branch hcomptrans git://github.com/mortberg/cubicaltt
   - cd cubicaltt
-  - git checkout hcomptrans
-  - stack init
-  - printf "\nextra-deps:\n" >> stack.yaml
-  - printf "  - BNFC-2.8.1\n" >> stack.yaml
-  - ls
-  - stack install alex happy
-  - ls ./.stack-work/dist/x86_64-linux
+  - cp ../ci/ctt-stack.yaml stack.yaml
+  - stack install BNFC
+  - stack build
+  - CUBICAL=$(stack path --local-install-root)/bin/cubical
   - cd ..
-  - ./cubicaltt/.stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/cubical/cubical -b src/hopf.ctt
+  - $CUBICAL -b src/hopf.ctt
