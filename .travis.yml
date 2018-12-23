@@ -20,7 +20,8 @@ addons:
 before_install:
   - mkdir -p ~/.local/bin
   - export PATH=$HOME/.local/bin:$PATH
-  - travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
+  - ARCH=https://www.stackage.org/stack/linux-x86_64
+  - travis_retry curl -L $ARCH | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
 
 install:
   - git clone --single-branch --branch hcomptrans git://github.com/mortberg/cubicaltt
