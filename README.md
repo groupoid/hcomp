@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/groupoid/hcomp.svg?branch=master)](https://travis-ci.org/groupoid/hcomp)
+[![Build Status](https://travis-ci.org/groupoid/hopf.svg?branch=master)](https://travis-ci.org/groupoid/hopf)
 
 Groupoid Infinity
 =================
