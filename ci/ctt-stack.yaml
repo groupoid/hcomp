@@ -4,4 +4,8 @@ packages:
 extra-deps:
   - directory-1.2.7.1
   - time-1.5.0.1
-
+  - process-1.4.3.0
+  - unix-2.7.2.2
+  - Cabal-2.0.1.1
+  - parsec-3.1.14.0
+  - text-1.2.4.1
